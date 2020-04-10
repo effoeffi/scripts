@@ -1,0 +1,4 @@
+#seymour-config/base/kustomization.yaml
+
+resources:
+  - seymour.yaml
