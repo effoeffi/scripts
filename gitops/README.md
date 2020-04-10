@@ -5,8 +5,8 @@
 2. Init app and create 2 new repos: `seymour-config` and `seymour-env`
 ```
 appctl init seymour-config \
-    --app-config-repo github.com/effoeffi/seymour-config /
-    --deployment-repo github.com/effoeffi/seymour-env /
+    --app-config-repo github.com/effoeffi/seymour-config \
+    --deployment-repo github.com/effoeffi/seymour-env \
     --config-path kubernetes
 ```
 3. add new env `dev` and connect to `dev` cluster
