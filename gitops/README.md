@@ -21,19 +21,26 @@ git log
 ```
 tree
 ```
-6. copy k8s yaml into `seymour-config/kubernetes/base`
-7. update `seymour-config/kubernetes/base/kustomization.yaml` with path to created file
-8. dry run config
+6. Copy k8s yaml into `seymour-config/kubernetes/base`
+7. Update `seymour-config/kubernetes/base/kustomization.yaml` with path to created file
+8. Dry run config
 ```
 kubectl apply -k kubernetes/base/ --dry-run -o yaml
 ```
-9. git tag 1
-10. git push origin --tags
-11. appctl prepare dev --from-tag 1
-message with PR that created inv seymour-env
-12. do the `apply` without merge the PR -> deny
+9. tag changes
+```
+git tag 1
+git push origin --tags
+```
+10. Prepare env PR
+```
+appctl prepare dev --from-tag 1
+```
+Message with created PR in seymour-env
+12. Run `apply` without merge the PR -> deny
+```
 appctl apply dev --from-tag 1
-13. merge PR in seymour-env
-14. run again
-appctl apply dev --from-tag 1
-15. open GCP and see GKE/Applications
+```
+13. Merge PR in seymour-env and see created `dev` branch
+14. Rerun apply (12)
+15. Open GCP and see GKE/Applications
