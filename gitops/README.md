@@ -32,11 +32,10 @@ kubectl apply -k kubernetes/base/ --dry-run -o yaml
 git tag 1
 git push origin --tags
 ```
-10. Prepare env PR
+10. Prepare env PR (response with created PR in seymour-env)
 ```
 appctl prepare dev --from-tag 1
 ```
-Message with created PR in seymour-env
 11. Run `apply` without merge the PR -> deny
 ```
 appctl apply dev --from-tag 1
