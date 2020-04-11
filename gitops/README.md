@@ -37,13 +37,13 @@ git push origin --tags
 appctl prepare dev --from-tag 1
 ```
 Message with created PR in seymour-env
-12. Run `apply` without merge the PR -> deny
+11. Run `apply` without merge the PR -> deny
 ```
 appctl apply dev --from-tag 1
 ```
-13. Merge PR in seymour-env and see created `dev` branch
-14. Rerun apply (12)
-15. Open GCP and see GKE/Applications
+12. Merge PR in seymour-env and see created `dev` branch
+13. Rerun apply (12)
+14. Open GCP and see GKE/Applications
 
 Refreances:
 - https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
