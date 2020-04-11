@@ -47,3 +47,4 @@ appctl apply dev --from-tag 1
 Refreances:
 - https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
 - https://cloud.google.com//kubernetes-engine/docs/how-to/add-on/application-delivery
+- https://github.com/kubernetes-sigs/kustomize/tree/master/docs
