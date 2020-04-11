@@ -44,3 +44,7 @@ appctl apply dev --from-tag 1
 13. Merge PR in seymour-env and see created `dev` branch
 14. Rerun apply (12)
 15. Open GCP and see GKE/Applications
+
+Refreances:
+- https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
+- https://cloud.google.com//kubernetes-engine/docs/how-to/add-on/application-delivery
