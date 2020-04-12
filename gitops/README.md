@@ -1,6 +1,12 @@
-1. [optinal] Create k8s cluster, for example dev (so we'll connect an env to it)
+1. Create k8s cluster, for example dev (so we'll connect an env to it)
 ```
-~/view/projects/gitops/demo/script/create.sh effi-dev
+gcloud beta container clusters create ${CLUSTER_NAME} \
+  --cluster-version 1.15.11-gke.3 \
+  --num-nodes=1 \
+  --machine-type=n1-standard-4 \
+  --addons ApplicationManager \
+  --quiet \
+  --preemptible
 ```
 2. Init app and create 2 new repos: `seymour-config` and `seymour-env`
 ```
@@ -48,3 +54,4 @@ Refreances:
 - https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
 - https://cloud.google.com//kubernetes-engine/docs/how-to/add-on/application-delivery
 - https://github.com/kubernetes-sigs/kustomize/tree/master/docs
+- Sync: https://cloud.google.com/kubernetes-engine/docs/add-on/config-sync/how-to
