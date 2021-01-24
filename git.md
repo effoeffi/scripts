@@ -19,3 +19,14 @@ See commits, `space` to see next page, `q` exit
 ```bash
 $ git log
 ```
+
+Set account's default identity *globally*
+```
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git config --global user.password "your password"
+```
+Edit account
+```
+git config --global --edit
+```
