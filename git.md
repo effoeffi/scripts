@@ -20,11 +20,22 @@ See commits, `space` to see next page, `q` exit
 $ git log
 ```
 
+Commit and push
+```
+git add <file>
+git commit -m "my message"
+git push -u origin master
+```
+
 Set account's default identity *globally*
 ```
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 git config --global user.password "your password"
+```
+Turn on credential helper to cache credentials
+```
+git config --global credential.helper osxkeychain
 ```
 Edit account
 ```
